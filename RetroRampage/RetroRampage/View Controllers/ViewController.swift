@@ -17,18 +17,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupImageView()
         
-        var bitmap = Bitmap(width: 8, height: 8, color: .white)
-        bitmap[0, 0] = .blue
-        
-        imageView.image = UIImage(bitmap: bitmap)
+        let displayLink = CADisplayLink(target: self, selector: #selector(update))
+        displayLink.add(to: .main, forMode: .common)
     }
-    
+
     private func setupImageView() {
         view.addSubview(imageView)
         imageView.fillSuperview()
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .black
         imageView.layer.magnificationFilter = .nearest
+    }
+
+    @objc
+    private func update(_ displayLink: CADisplayLink) {
+        var renderer = Renderer(width: 8, height: 8)
+        renderer.draw()
+
+        imageView.image = UIImage(bitmap: renderer.bitmap)
     }
 }
 
