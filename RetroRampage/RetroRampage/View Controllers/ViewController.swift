@@ -12,6 +12,7 @@ import Engine
 class ViewController: UIViewController {
     
     private let imageView = UIImageView()
+    private let player = Player(position: Vector(x: 4, y: 4))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
     @objc
     private func update(_ displayLink: CADisplayLink) {
         var renderer = Renderer(width: 8, height: 8)
-        renderer.draw()
+        renderer.draw(player)
 
         imageView.image = UIImage(bitmap: renderer.bitmap)
     }

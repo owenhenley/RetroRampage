@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		153ED41122D31BCB00965B5B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153ED41022D31BCB00965B5B /* Renderer.swift */; };
+		158DB77222D327C900E4A0CC /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DB77122D327C900E4A0CC /* Vector.swift */; };
+		158DB77422D3289F00E4A0CC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DB77322D3289F00E4A0CC /* Player.swift */; };
+		15D084E622D5080800603A18 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153ED41022D31BCB00965B5B /* Renderer.swift */; };
 		15E2E59522D20B6E00A6C091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2E59422D20B6E00A6C091 /* AppDelegate.swift */; };
 		15E2E59722D20B6E00A6C091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2E59622D20B6E00A6C091 /* ViewController.swift */; };
 		15E2E59A22D20B6E00A6C091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E2E59822D20B6E00A6C091 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		153ED41022D31BCB00965B5B /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		158DB77122D327C900E4A0CC /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		158DB77322D3289F00E4A0CC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		15E2E59122D20B6E00A6C091 /* RetroRampage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroRampage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E2E59422D20B6E00A6C091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E2E59622D20B6E00A6C091 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		158DB77622D32D3900E4A0CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				158DB77322D3289F00E4A0CC /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		15D084E722D508E000603A18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				153ED41022D31BCB00965B5B /* Renderer.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		15E2E58822D20B6E00A6C091 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +122,8 @@
 		15E2E59322D20B6E00A6C091 /* RetroRampage */ = {
 			isa = PBXGroup;
 			children = (
+				15D084E722D508E000603A18 /* Supporting Files */,
+				158DB77622D32D3900E4A0CC /* Models */,
 				15E2E5C722D21A6200A6C091 /* Extensions */,
 				15E2E5CA22D21A9000A6C091 /* Resources */,
 				15E2E5C822D21A6A00A6C091 /* Storyboards */,
@@ -113,7 +135,7 @@
 		15E2E5AC22D20BD000A6C091 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				153ED41022D31BCB00965B5B /* Renderer.swift */,
+				158DB77122D327C900E4A0CC /* Vector.swift */,
 				15E2E5BC22D2135C00A6C091 /* Bitmap.swift */,
 				15E2E5BA22D211B100A6C091 /* Color.swift */,
 				15E2E5AE22D20BD000A6C091 /* Info.plist */,
@@ -272,6 +294,8 @@
 				15E2E5C622D219CF00A6C091 /* UIImage+Bitmap.swift in Sources */,
 				15E2E5B922D20D6600A6C091 /* AutoLayout.swift in Sources */,
 				15E2E59722D20B6E00A6C091 /* ViewController.swift in Sources */,
+				158DB77422D3289F00E4A0CC /* Player.swift in Sources */,
+				15D084E622D5080800603A18 /* Renderer.swift in Sources */,
 				15E2E59522D20B6E00A6C091 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15E2E5C422D2199F00A6C091 /* Bitmap.swift in Sources */,
-				153ED41122D31BCB00965B5B /* Renderer.swift in Sources */,
+				158DB77222D327C900E4A0CC /* Vector.swift in Sources */,
 				15E2E5C122D2197E00A6C091 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
