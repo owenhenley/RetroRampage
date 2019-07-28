@@ -6,9 +6,6 @@
 //  Copyright © 2019 Owen Henley. All rights reserved.
 //
 
-import Foundation
-import Engine
-
 public struct Renderer {
     public private(set) var bitmap: Bitmap
     
