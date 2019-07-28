@@ -9,6 +9,7 @@
 public struct Player {
     public var position: Vector
     public var velocity: Vector
+    public var radius: Double = 0.5
 
     public init(position: Vector)  {
         self.position = position
@@ -17,7 +18,8 @@ public struct Player {
 }
 
 public extension Player {
-    mutating func update() {
-        position += velocity
+    var rect: Rect {
+        let halfSize = Vector(x: radius, y: radius)
+        return Rect(min: position - halfSize, max: position + halfSize)
     }
 }
