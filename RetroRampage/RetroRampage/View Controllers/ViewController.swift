@@ -10,9 +10,9 @@ import UIKit
 import Engine
 
 class ViewController: UIViewController {
+    
     private let imageView = UIImageView()
     private var world = World()
-    
     private var lastFrameTime = CACurrentMediaTime()
 
     override func viewDidLoad() {

@@ -15,9 +15,8 @@ extension UIImage {
         let bytesPerPixel = MemoryLayout<Color>.size
         let bytesPerRow = bitmap.width * bytesPerPixel
         
-        guard let providerRef = CGDataProvider(data: Data(
-            bytes: bitmap.pixels, count: bitmap.height * bytesPerRow
-            ) as CFData) else {
+        guard let providerRef = CGDataProvider(data: Data(bytes: bitmap.pixels, count: bitmap.height * bytesPerRow) as CFData)
+            else {
                 return nil
         }
         
@@ -31,8 +30,8 @@ extension UIImage {
                                     provider: providerRef,
                                     decode: nil,
                                     shouldInterpolate: true,
-                                    intent: .defaultIntent
-            ) else {
+                                    intent: .defaultIntent)
+            else {
                 return nil
         }
         
